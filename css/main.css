@@ -17,7 +17,6 @@ a {
 
 /* ========= Global Variable =============*/
 :root {
-
   --main-color: #10cab7;
   --secondary-color: #2c4755;
   --white-color: #fff;
@@ -28,15 +27,14 @@ a {
 }
 html {
   scroll-behavior: smooth;
-
 }
 
-/* ===== display gid as a Frame work ====== */
+/* ===== display grid as a Frame work ====== */
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
-
 /* ===== End display grid ====== */
 
 /* ======== special Heading ========== */
@@ -63,8 +61,8 @@ html {
 
 /* ======== Global Container ================ */
 .container {
-    width: 90%;
-    padding: 10px;
+  width: 90%;
+  padding: 10px;
   margin: auto;
 }
 
@@ -152,8 +150,6 @@ section {
   background-color: var(--white-color);
 }
 
-
-
 .features .feat {
   text-align: center;
   padding: 30px;
@@ -182,11 +178,10 @@ section {
 
 .srv-item {
   display: flex;
- 
 }
 .srv-item .srv-content {
-    margin-bottom: 15px;
-    margin-left: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
 .srv-item .srv-content h2 {
   color: var(--secondary-color);
@@ -202,13 +197,11 @@ section {
 .srv-item .srv-icon {
   color: var(--main-color);
   font-size: 40px;
-
 }
 .services .column:nth-child(3) {
   text-align: center;
   position: relative;
   margin-top: 50px;
-
 }
 .services .column:nth-child(3) img {
   position: relative;
@@ -227,146 +220,149 @@ section {
 /* <!-- ========== End Services =========== --> */
 
 /* <!-- ==========  portfolio =========== --> */
- 
-    #Portfolio .container {
-    
-        gap: 20px;
-        
-    }
-    #Portfolio .special-head h1{
-        font-size: 55px;
-    }
-    .card {
-        box-shadow: 5px 5px 15px rgba(0 0 0 / 0.5);
-    }
-    .card .card-image img{
-        width: 100%;
-        display: block;
-    }
-    .card .card-caption {
-        padding: 15px;
-        line-height: var(--line-height);
-    }
-    .card .card-caption h2 {
-        color: var(--secondary-color);
-        font-weight: bolder;
-    }
 
-    .card .card-caption p {
-        color: var(--secondary-color);
-    }
-    #Portfolio button {
-        padding: 15px 25px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 20px;
-        cursor: pointer;
-        outline: none;
-        border: 1px solid var(--secondary-color);
-        color: var(--secondary-color);
-        background-color: var(--white-color);
-        font-weight: bolder;
-        transition: var(--transition);
-    }
-    #Portfolio button:hover {
-        background-color: var(--secondary-color);
-        color: var(--white-color);
-    }
+#Portfolio .special-head h1 {
+  font-size: 55px;
+}
+.card {
+  box-shadow: 5px 5px 15px rgba(0 0 0 / 0.5);
+  overflow: hidden;
+}
+.card .card-image img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%);
+  transition: var(--transition);
+}
+.card .card-image {
+  overflow: hidden;
+}
+
+.card:hover .card-image img {
+  filter: grayscale(0);
+  transform: scale(1.2) rotate(-5deg);
+}
+.card .card-caption {
+  padding: 15px;
+  line-height: var(--line-height);
+}
+.card .card-caption h2 {
+  color: var(--secondary-color);
+  font-weight: bolder;
+}
+
+.card .card-caption p {
+  color: var(--secondary-color);
+}
+#Portfolio button {
+  padding: 15px 25px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: var(--white-color);
+  font-weight: bolder;
+  transition: var(--transition);
+}
+#Portfolio button:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
 
 /* <!-- ========== End portfolio =========== --> */
 
 /* <!-- ==========  About =========== --> */
-  
-    .about-image {
-        text-align: center;
-        position: relative;
-       max-height: 330px;
 
-    }
-    .about-image img {
-        position: relative;
-        z-index: 1;
-    }
-    .about-content {
-        line-height: var(--line-height);
-        color: var(--secondary-color);
+.about-image {
+  text-align: center;
+  position: relative;
+  max-height: 330px;
+}
+.about-image img {
+  position: relative;
+  z-index: 1;
+}
+.about-content {
+  line-height: var(--line-height);
+  color: var(--secondary-color);
+}
+.about-content p:first-child {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.about-content .brdr {
+  width: 50%;
+  height: 2px;
+  background-color: var(--main-color);
+  margin: 10px 0px;
+}
+.about-image::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: calc(100% + 100px);
+  background-color: var(--E-color);
+  top: -50px;
+  left: 60px;
+}
 
-    }
-    .about-content p:first-child {
-        font-size: 25px;
-        font-weight: bolder; 
-    }
-    .about-content .brdr {
-        width: 50%;
-        height: 2px;
-        background-color: var(--main-color);
-        margin: 10px 0px;
-    }
-    .about-image::after {
-        content: "";
-        position: absolute;
-        width: 100px;
-        height: calc(100% + 100px);
-        background-color: var(--E-color);
-        top: -50px;
-        left: 60px;
-    }
+.about-image::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 70%;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
 
-    .about-image::before {
-        content: "";
-        position: absolute;
-        width: 100px;
-        height: 70% ;
-        border-left: 80px solid var(--main-color);     
-        border-bottom: 80px solid var(--main-color);        
-   
-        right: 50px;
-        top: -30px;
+  right: 50px;
+  top: -30px;
+}
 
-    }
-  
 /* <!-- ========== End About =========== --> */
 
 /* <!-- ==========  contact =========== --> */
-  #Contact {
-    background-color: var(--E-color);
-    margin-top: 100px;
-    padding-top: 0;
-  }
-  #Contact .special-head h1{
-    color: #ddd;
-  }
-  #Contact .container {
-    text-align: center;
-    line-height: var(--line-height);
-
-  }
- #Contact .container p{
-    font-size: 25px;
- }
- #Contact .container p span ,footer span {
-    color: var(--main-color);
- }
+#Contact {
+  background-color: var(--E-color);
+  margin-top: 100px;
+  padding-top: 0;
+}
+#Contact .special-head h1 {
+  color: #ddd;
+}
+#Contact .container {
+  text-align: center;
+  line-height: var(--line-height);
+}
+#Contact .container p,
+.contact-icon {
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+#Contact .container p span,
+footer span {
+  color: var(--main-color);
+}
 .contact-icon i {
-    margin: 0px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: var(--transition);
-
- }
+  margin: 0px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: var(--transition);
+}
 .contact-icon i:hover {
-    color: var(--main-color);
- }
- .contact-icon span {
-    
-    font-size: 25px;
- }
+  color: var(--main-color);
+}
+.contact-icon span {
+  font-size: 25px;
+}
 /* <!-- ========== End contact =========== --> */
 footer {
-    text-align: center;
-    color: var(--white-color);
-    font-size: 18px;
-    background-color: var(--secondary-color);
-    padding: 50px;
+  text-align: center;
+  color: var(--white-color);
+  font-size: 18px;
+  background-color: var(--secondary-color);
+  padding: 50px;
 }

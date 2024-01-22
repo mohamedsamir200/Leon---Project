@@ -1,0 +1,89 @@
+
+
+/* Extra small devices (phones, 600px and down) */
+@media  screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+/* ========================= */
+    /* header */
+    .header-content h1 {
+        font-size: 40px ;
+    }
+    .header-content p {
+        font-size: 19px;
+    }
+/* ========================= */
+ /* special head */ 
+
+ .special-head h1 {
+    font-size: 60px;
+ }
+ .special-head p {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+ }
+/* ========================= */
+
+/* contact */
+#Contact .container p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+ }
+}
+
+
+@media (max-width:768px) {
+
+        /* nav bar */
+        .nav-links ul{
+            flex-direction: column;
+            background-color: var(--secondary-color);
+            position: fixed;
+            z-index: 123;
+            right: -100%;
+            top: 40px;
+            height: 100vh;
+            width: 80%;
+            transition: 0.5s;
+        }
+    
+        .nav-links ul li {
+            margin: 15px 0px;
+            border-bottom: 1px solid var(--E-color);
+        }
+
+        .nav-links ul li a:focus {
+            padding-left: 10px;
+        }
+
+        .check-btn {
+            display: block;
+        }
+
+        #check:checked + .nav-links ul {
+            right: 0;
+        }
+     /*========= end nav bar ===== */
+
+     #About .container {
+        display: grid;
+        grid-template-columns: repeat( 1 , 1fr);
+    }
+
+    .about-content {
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .about-content .brdr {
+        width: 100%;
+    }
+    
+}
+
+
+
+
